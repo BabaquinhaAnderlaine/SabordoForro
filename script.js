@@ -142,21 +142,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const productsData = {
         dindin: {
             title: "Dindins Gourmet",
-            image: "imagens\\dindin1.jpg",
+            image: "dindin1.jpg",
             description: "Nossos deliciosos dindins gourmet são uma explosão de sabor em cada mordida. Feitos com ingredientes selecionados e receita exclusiva, são a combinação perfeita entre tradição e sofisticação.",
             details: "<p><strong></strong></p><p><strong>Opções de sabor:</strong> Morango, Ninho, Coco, Maracujá, Biscoito.</p>",
             price: "R$ 5,00"
         },
         empadao: {
             title: "Empadão Nordestino",
-            image: "imagens\\epadao2.jpg",
+            image: "epadao2.jpg",
             description: "Nosso empadão nordestino é preparado com massa sequinha e recheio especial de frango temperado com especiarias típicas da região. Uma verdadeira experiência gastronômica que remete às tradições do Nordeste.",
             details: "<p><strong></p><p><strong>Tamanho:</strong> Porção individual (aproximadamente 300g)</p>",
             price: "R$ 7,00"
         },
         suco: {
             title: "Sucos Naturais",
-            image: "imagens\\suco.jpg",
+            image: "suco.jpg",
             description: "Nossos sucos naturais são extraídos das frutas mais frescas do Nordeste, sem adição de conservantes. Cada copo é uma explosão de vitaminas e sabor que refresca e revigora.",
             details: "<p><strong>Sabores disponíveis:</strong> Maracujá e Laranja.</p><p><strong>Tamanho:</strong> 200ml</p><p><strong></p>",
             price: "R$ 3,00"
@@ -207,3 +207,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
+
