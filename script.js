@@ -16,15 +16,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const songs = [
         {
             title: "Sonho de Amor",
-            src: "musicas\\Sonho de Amor.mp3"
+            src: "Sonho de Amor.mp3"
         },
         {
             title: "Manchete dos Jornais",
-            src: "musicas\\Manchete Dos Jornais.mp3"
+            src: "Manchete Dos Jornais.mp3"
         },
         {
             title: "Diga Sim pra Mim",
-            src: "musicas\\Diga Sim pra Mim.mp3"
+            src: "Diga Sim pra Mim.mp3"
         }
     ];
     
@@ -205,4 +205,5 @@ document.addEventListener('DOMContentLoaded', function() {
             closeProductModal();
         }
     });
+
 });
