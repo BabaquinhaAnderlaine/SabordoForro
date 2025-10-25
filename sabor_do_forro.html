@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor do Forró - Comida Nordestina</title>
+    <!-- Adicionando Font Awesome para os ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Controles de música - CORRIGIDO: posicionado após o header -->
+    <div class="music-controls">
+        <span class="music-info">Forró</span>
+        <button class="music-btn" id="prev-btn">
+            <i class="fas fa-step-backward"></i>
+        </button>
+        <button class="music-btn" id="play-btn">
+            <i class="fas fa-play"></i>
+        </button>
+        <button class="music-btn" id="next-btn">
+            <i class="fas fa-step-forward"></i>
+        </button>
+        <div class="volume-control" id="volume-control">
+            <div class="volume-level" id="volume-level"></div>
+        </div>
+    </div>
+    
+    <header>
+        <h1 class="logo">Sabor do Forró</h1>
+        <p class="tagline">Autêntica culinária nordestina para matar sua vontade</p>
+        <a href="#produtos" class="btn">Conheça nossos produtos</a>
+    </header>
+    
+    <section id="produtos">
+        <div class="container">
+            <h2>Nossos Produtos</h2>
+            <div class="products">
+                <div class="product-card" data-product="dindin">
+                    <img src="imagens\dindin1.jpg" alt="Dindin" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-title">Dindins</h3>
+                        <p class="product-description">Sonho de Amor, Faltou o Leite Ninho, Coelhinho, Dois Amores Duas Paixões, Timidez.</p>
+                        <p class="product-price">R$ 5,00</p>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-product="empadao">
+                    <img src="imagens\epadao2.jpg" alt="Empadão" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-title">Empadão</h3>
+                        <p class="product-description">Nosso empadão nordestino com recheio especial de frango. Massa sequinha e sabor inigualável.</p>
+                        <p class="product-price">R$ 7,00</p>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-product="suco">
+                    <img src="imagens\suco.jpg" alt="Suco" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-title">Sucos Naturais</h3>
+                        <p class="product-description">Refrescantes sucos naturais das frutas do Nordeste: maracujá e laranja.</p>
+                        <p class="product-price">R$ 3,00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="about">
+        <div class="container">
+            <h2 id="nois">Sobre Nós</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>A Sabor do Forró nasceu do amor pela culinária nordestina e da vontade de compartilhar os sabores autênticos do Nordeste com todos.</p>
+                    <p>Nossos produtos são preparados com ingredientes selecionados e receitas tradicionais, tudo isso enquanto ouvimos os maiores hits do nordeste🎶.</p>
+                    <p>Venha experimentar nossos dindins, empadão e sucos e sentir o verdadeiro sabor do forró!</p>
+                </div>
+                <div class="about-image">
+                    <img src="imagens\logosdf.jpg" width="30px" height="30px" alt="LOGO">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contato</h3>
+                
+                <p>Email: sabordoforro123@gmail.com</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Horário de Funcionamento</h3>
+                <p>07 de novembro: 08h às 11h</p>
+               
+            </div>
+            
+            <div class="footer-section">
+                <h3>Localização</h3>
+                <p>EEEP Paulo Petrola, refeitório</p>
+                <p>Fortaleza - CE</p>
+            </div>
+        </div>
+        
+        <div class="social-links">
+            <a href="https://www.instagram.com/sabor.do.forro?igsh=cnJvYnpzNmd3ZG9j" target="_blank"><img src="imagens\Instagram_icon.png" width="32px" height="32px" alt="Instagram"></a>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 Sabor do Forró - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Modal para exibir detalhes dos produtos -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle">Produto</h2>
+                <button class="close-modal" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="" class="modal-image">
+                <p class="modal-description" id="modalDescription"></p>
+                <div class="modal-details" id="modalDetails"></div>
+                <p class="modal-price" id="modalPrice"></p>
+                <div class="modal-footer">
+                    <button class="modal-btn modal-btn-secondary" id="modalCloseBtn">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
