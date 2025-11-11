@@ -9,7 +9,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Controles de música - CORRIGIDO: posicionado após o header -->
+    <!-- Menu de Navegação -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Sabor do Forró</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#produtos" class="nav-link">Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#historia" class="nav-link">História</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#sobre" class="nav-link">Sobre Nós</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contato" class="nav-link">Contato</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Controles de música -->
     <div class="music-controls">
         <span class="music-info">Forró</span>
         <button class="music-btn" id="prev-btn">
@@ -26,74 +57,107 @@
         </div>
     </div>
     
-    <header>
+    <header id="home">
         <h1 class="logo">Sabor do Forró</h1>
         <p class="tagline">Autêntica culinária nordestina para matar sua vontade</p>
         <a href="#produtos" class="btn">Conheça nossos produtos</a>
     </header>
-    
-    <section id="produtos">
-        <div class="container">
-            <h2>Nossos Produtos</h2>
-            <div class="products">
-                <div class="product-card" data-product="dindin">
-                    <img src="dindin1.jpg" alt="Dindin" class="product-img">
-                    <div class="product-info">
-                        <h3 class="product-title">Dindins</h3>
-                        <p class="product-description">Sonho de Amor, Faltou o Leite Ninho, Coelhinho, Dois Amores Duas Paixões, Timidez.</p>
-                        <p class="product-price">R$ 5,00</p>
+
+    <div class="main-container">
+        <main class="main-content">
+            <section id="produtos">
+                <div class="container">
+                    <h2>Nossos Produtos</h2>
+                    <div class="products">
+                        <div class="product-card" data-product="dindin">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeeGCw2496cbyl93uagn-3KrhDXdoowzj6Mg&s" alt="Dindin" class="product-img">
+                            <div class="product-info">
+                                <h3 class="product-title">Dindins</h3>
+                                <p class="product-description">Deliciosos dindins goumerts. Uma explosão de sabor em cada mordida.</p>
+                                <p class="product-price">R$ 5,00</p>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card" data-product="empadao">
+                            <img src="https://renata.com.br/images/receitas/50/renata-imagem-receitas-empadao-de-frango-share.jpg" alt="Empadão" class="product-img">
+                            <div class="product-info">
+                                <h3 class="product-title">Empadão</h3>
+                                <p class="product-description">Nosso empadão nordestino com recheio especial de frango. Massa sequinha e sabor inigualável.</p>
+                                <p class="product-price">R$ 7,00</p>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card" data-product="suco">
+                            <img src="https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Suco" class="product-img">
+                            <div class="product-info">
+                                <h3 class="product-title">Sucos Naturais</h3>
+                                <p class="product-description">Refrescantes sucos naturais das frutas do Nordeste: maracujá, acerola, goiaba e muito mais.</p>
+                                <p class="product-price">R$ 3,00</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="product-card" data-product="empadao">
-                    <img src="epadao2.jpg" alt="Empadão" class="product-img">
-                    <div class="product-info">
-                        <h3 class="product-title">Empadão</h3>
-                        <p class="product-description">Nosso empadão nordestino com recheio especial de frango. Massa sequinha e sabor inigualável.</p>
-                        <p class="product-price">R$ 7,00</p>
+            </section>
+            
+            <section class="about" id="sobre">
+                <div class="container">
+                    <h2 id="nois">Sobre Nós</h2>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <p>O Sabor do Forró nasceu do amor pela culinária nordestina e da vontade de compartilhar os sabores autênticos do Nordeste com todos.</p>
+                            <p>Nossos produtos são preparados com ingredientes selecionados e receitas tradicionais, tudo isso enquanto ouvimos os maiores hits do nordeste🎶.</p>
+                            <p>Venha experimentar nossos dindins, empadões e sucos e sentir o verdadeiro sabor do forró!</p>
+                        </div>
+                        <div class="about-image">
+                            <img src="logosdf.jpg" width="30px" height="30px" alt="Interior do restaurante">
+                        </div>
                     </div>
                 </div>
+            </section>
+        </main>
+
+        <!-- Aside com a história das comidas -->
+        <aside class="sidebar" id="historia">
+            <div class="history-content">
+                <h2>História das Comidas Nordestinas</h2>
                 
-                <div class="product-card" data-product="suco">
-                    <img src="suco.jpg" alt="Suco" class="product-img">
-                    <div class="product-info">
-                        <h3 class="product-title">Sucos Naturais</h3>
-                        <p class="product-description">Refrescantes sucos naturais das frutas do Nordeste: maracujá e laranja.</p>
-                        <p class="product-price">R$ 3,00</p>
-                    </div>
+                <div class="history-item">
+                    <h3>🎵 Dindins - A Tradição Doce</h3>
+                    <p>Os dindins são uma herança da culinária portuguesa adaptada ao Nordeste brasileiro. Originalmente conhecidos como "queijadinhas", ganharam o carinhoso nome de "dindin" no Nordeste, onde foram reinventados com ingredientes locais como o coco e a tapioca.</p>
+                    <p>No século XIX, eram servidos nas festas juninas como símbolo de prosperidade. Cada família desenvolvia sua receita secreta, passada de geração em geração.</p>
+                </div>
+
+                <div class="history-item">
+                    <h3>🥧 Empadão - A Rainha das Festas</h3>
+                    <p>O empadão nordestino tem suas raízes nas cozinhas dos engenhos de açúcar do século XVII. Diferente da empada tradicional, o empadão nordestino é maior e possui uma massa mais sequinha, herdada das técnicas indígenas de manipulação da farinha.</p>
+                    <p>O recheio de frango temperado com coentro e cheiro-verde reflete a fusão entre as tradições portuguesas, indígenas e africanas que caracterizam a culinária nordestina.</p>
+                </div>
+
+                <div class="history-item">
+                    <h3>🍹 Sucos - O Refresco da Terra</h3>
+                    <p>Os sucos de frutas tropicais são parte essencial da cultura nordestina. No sertão, onde a água era escassa, as frutas suculentas como caju, goiaba e manga eram valorizadas como fonte de hidratação e nutrientes.</p>
+                    <p>Cada fruta carrega uma história: o caju era consumido pelos indígenas antes da colonização, a goiaba foi trazida pelos portugueses, e o maracujá era usado em rituais indígenas por suas propriedades calmantes.</p>
+                </div>
+
+                <div class="history-item">
+                    <h3>🎶 Comida e Forró - Uma Combinação Perfeita</h3>
+                    <p>A culinária nordestina e o forró são inseparáveis. Desde as festas nos engenhos até os arraiais modernos, a comida sempre alimentou o corpo enquanto a música alimentava a alma.</p>
+                    <p>Nossas receitas são preparadas ao som dos grandes mestres do forró, mantendo viva a tradição de que comida boa precisa de boa música para ser completa.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </aside>
+    </div>
     
-    <section class="about">
-        <div class="container">
-            <h2 id="nois">Sobre Nós</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>A Sabor do Forró nasceu do amor pela culinária nordestina e da vontade de compartilhar os sabores autênticos do Nordeste com todos.</p>
-                    <p>Nossos produtos são preparados com ingredientes selecionados e receitas tradicionais, tudo isso enquanto ouvimos os maiores hits do nordeste🎶.</p>
-                    <p>Venha experimentar nossos dindins, empadão e sucos e sentir o verdadeiro sabor do forró!</p>
-                </div>
-                <div class="about-image">
-                    <img src="logosdf.jpg" width="30px" height="30px" alt="LOGO">
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <footer>
+    <footer id="contato">
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Contato</h3>
-                
                 <p>Email: sabordoforro123@gmail.com</p>
             </div>
             
             <div class="footer-section">
                 <h3>Horário de Funcionamento</h3>
                 <p>07 de novembro: 08h às 11h</p>
-               
             </div>
             
             <div class="footer-section">
@@ -104,7 +168,9 @@
         </div>
         
         <div class="social-links">
-            <a href="https://www.instagram.com/sabor.do.forro?igsh=cnJvYnpzNmd3ZG9j" target="_blank"><img src="Instagram_icon.png" width="32px" height="32px" alt="Instagram"></a>
+            <a href="https://www.instagram.com/sabor.do.forro?igsh=cnJvYnpzNmd3ZG9j">
+                <img src="Instagram_icon.png" width="32px" height="32px" alt="Instagram">
+            </a>
         </div>
         
         <div class="copyright">
@@ -133,6 +199,4 @@
     
     <script src="script.js"></script>
 </body>
-
 </html>
-

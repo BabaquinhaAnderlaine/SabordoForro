@@ -7,6 +7,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const volumeLevel = document.getElementById('volume-level');
     const musicInfo = document.querySelector('.music-info');
     
+    
+    // Menu mobile
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navMenu = document.querySelector('.nav-menu');
+    
     // Verificar se os elementos foram encontrados
     console.log('Play button:', playBtn);
     console.log('Prev button:', prevBtn);
@@ -16,15 +21,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const songs = [
         {
             title: "Sonho de Amor",
-            src: "Sonho de Amor.mp3"
+            src: "https://alpha.123tokyo.xyz/get.php/b/37/3c5QHE0GkSM.mp3?n=Sonho%20de%20Amor&uT=R&uN=aGVsbG8tdFNxRFFJT08z&h=Z4n0hz7VHqEm-fMdB3RvVg&s=1760200843&uT=R&uN=aGVsbG8tdFNxRFFJT08z"
         },
         {
             title: "Manchete dos Jornais",
-            src: "Manchete Dos Jornais.mp3"
+            src: "https://epsilon.123tokyo.xyz/get.php/7/76/mcjYdqcAvLM.mp3?n=Calcinha%20Preta%20-%20Manchete%20Dos%20Jornais%20%23AoVivoEmBel%C3%A9mDoPar%C3%A1%20DVD%20Vol.2&uT=R&uN=aGVsbG8tdFNxRFFJT08z&h=3wB8QCfxreRh-74wortroA&s=1760202349&uT=R&uN=aGVsbG8tdFNxRFFJT08z"
         },
         {
             title: "Diga Sim pra Mim",
-            src: "Diga Sim pra Mim.mp3"
+            src: "https://nu.123tokyo.xyz/get.php/3/33/oXy3UulzmW0.mp3?n=Diga%20Sim%20pra%20Mim&uT=R&uN=aGVsbG8tdFNxRFFJT08z&h=EupEJMIF6olxSCVex3jDLQ&s=1760202532&uT=R&uN=aGVsbG8tdFNxRFFJT08z"
         }
     ];
     
@@ -127,6 +132,23 @@ document.addEventListener('DOMContentLoaded', function() {
         loadSong(newIndex);
     });
 
+    // Menu mobile toggle
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    }
+
+    // Fechar menu ao clicar em um link
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+
     // CÓDIGO PARA OS BOTÕES DE PRODUTOS
     const productCards = document.querySelectorAll('.product-card');
     const modal = document.getElementById('productModal');
@@ -142,69 +164,24 @@ document.addEventListener('DOMContentLoaded', function() {
     const productsData = {
         dindin: {
             title: "Dindins Gourmet",
-            image: "dindin1.jpg",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeeGCw2496cbyl93uagn-3KrhDXdoowzj6Mg&s",
             description: "Nossos deliciosos dindins gourmet são uma explosão de sabor em cada mordida. Feitos com ingredientes selecionados e receita exclusiva, são a combinação perfeita entre tradição e sofisticação.",
-            details: "<p><strong></strong></p><p><strong>Opções de sabor:</strong> Morango, Ninho, Coco, Maracujá, Biscoito.</p>",
+            details: "<p><strong>Ingredientes:</strong> Farinha de trigo, manteiga, açúcar, ovos, leite condensado, coco ralado, fermento.</p><p><strong>Opções de sabor:</strong> Coco tradicional, chocolate, doce de leite, frutas vermelhas.</p>",
             price: "R$ 5,00"
         },
         empadao: {
             title: "Empadão Nordestino",
-            image: "epadao2.jpg",
+            image: "https://renata.com.br/images/receitas/50/renata-imagem-receitas-empadao-de-frango-share.jpg",
             description: "Nosso empadão nordestino é preparado com massa sequinha e recheio especial de frango temperado com especiarias típicas da região. Uma verdadeira experiência gastronômica que remete às tradições do Nordeste.",
-            details: "<p><strong></p><p><strong>Tamanho:</strong> Porção individual (aproximadamente 300g)</p>",
+            details: "<p><strong>Ingredientes:</strong> Farinha de trigo, manteiga, frango desfiado, cebola, alho, pimentão, azeitonas, ovos, leite, temperos nordestinos.</p><p><strong>Tamanho:</strong> Porção individual (aproximadamente 300g)</p>",
             price: "R$ 7,00"
         },
         suco: {
             title: "Sucos Naturais",
-            image: "suco.jpg",
-            description: "Nossos sucos naturais são extraídos das frutas mais frescas do Nordeste, sem adição de conservantes. Cada copo é uma explosão de vitaminas e sabor que refresca e revigora.",
-            details: "<p><strong>Sabores disponíveis:</strong> Maracujá e Laranja.</p><p><strong>Tamanho:</strong> 200ml</p><p><strong></p>",
-            price: "R$ 3,00"
+            image: "https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+            description: "Nossos sucos naturais são extraídos das frutas mais frescas do Nordeste, sem adição de conservantes ou açúcares. Cada copo é uma explosão de vitaminas e sabor que refresca e revigora.",
+            details: "<p><strong>Sabores disponíveis:</strong> Maracujá, acerola, goiaba, caju, manga, abacaxi com hortelã.</p><p><strong>Tamanhos:</strong> 300ml ou 500ml</p><p><strong>Benefícios:</strong> 100% natural, rico em vitaminas, sem conservantes.</p>",
+            price: "R$ 3"
         }
-    };
-
-    // Adicionar evento de clique aos cards de produto
-    productCards.forEach(card => {
-        card.addEventListener('click', function() {
-            const productType = this.getAttribute('data-product');
-            const productData = productsData[productType];
-            
-            // Preencher o modal com os dados do produto
-            modalTitle.textContent = productData.title;
-            modalImage.src = productData.image;
-            modalImage.alt = productData.title;
-            modalDescription.textContent = productData.description;
-            modalDetails.innerHTML = productData.details;
-            modalPrice.textContent = productData.price;
-            
-            // Exibir o modal
-            modal.style.display = 'flex';
-            document.body.style.overflow = 'hidden'; // Impede rolagem do fundo
-        });
-    });
-
-    // Fechar modal
-    function closeProductModal() {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto'; // Restaura rolagem
     }
-
-    closeModal.addEventListener('click', closeProductModal);
-    modalCloseBtn.addEventListener('click', closeProductModal);
-
-    // Fechar modal ao clicar fora do conteúdo
-    modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-            closeProductModal();
-        }
-    });
-
-    // Fechar modal com tecla ESC
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            closeProductModal();
-        }
-    });
-
-});
-
+        })
